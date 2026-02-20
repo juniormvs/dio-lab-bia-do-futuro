@@ -78,4 +78,6 @@ flowchart TD
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+- O agente não faz deduções baseadas em ideias.
+- Não faz induções de investimentos de médio/alto risco
+- Não faz utilização de dados sensíveis.

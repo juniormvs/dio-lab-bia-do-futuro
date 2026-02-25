@@ -5,7 +5,7 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-[O agente resolve a falta de instrução das pessoas relacionada a investimentos, e planejamento financeiro.]
+O agente resolve a falta de instrução das pessoas relacionada a investimentos, e planejamento financeiro. O agente também faz indicações de investimentos de forma segura dentro do perfil do usuário.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?

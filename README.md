@@ -60,12 +60,11 @@ Documente os prompts que definem o comportamento do seu agente:
 
 ### 4. Aplicação Funcional
 
-- **Chat Principal** (`src/app.py`) — Chatbot com streaming, feedback 👍👎 e métricas em tempo real
+- **Chat Principal** (`app.py`) — Chatbot com streaming, feedback 👍👎 e métricas em tempo real
 - **Dashboard de Métricas** (`pages/dashboard.py`) — Gráficos interativos com Plotly e exportação CSV
+- **Comparador de Modelos** (`pages/comparador.py`) — Testa múltiplos LLMs simultaneamente e compara performance
 
-
-📁 **Pasta:** [`src/`](./src/)
-
+> Para executar: `streamlit run app.py`
 ---
 
 ### 5. Avaliação e Métricas

@@ -31,13 +31,20 @@ Defina **o que** seu agente faz e **como** ele funciona:
 Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
 
 | Arquivo | Formato | Descrição |
-|---------|---------|-----------|
+|---|---|---|
 | `transacoes.csv` | CSV | Histórico de transações do cliente |
 | `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
 | `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
 | `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
 
 Você pode adaptar ou expandir esses dados conforme seu caso de uso.
+
+### Dados Gerados Automaticamente pelo Agente
+
+| Arquivo | Formato | Gerado por | Descrição |
+|---|---|---|---|
+| `metricas.csv` | CSV | `app.py` | Registra latência, tokens, velocidade, feedback 👍👎 e detecção de escopo a cada interação |
+| `metricas_comparador.csv` | CSV | `pages/comparador.py` | Registra métricas separadas por modelo LLM a cada comparação realizada |
 
 📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
 

@@ -46,7 +46,7 @@ Tom informal, acessível e direto. Evita jargões financeiros sem explicação p
 
 ## Arquitetura
 
-### Diagrama
+### Diagrama - Fluxo do Chat
 
 ```mermaid
 flowchart TD
@@ -64,6 +64,21 @@ flowchart TD
     K -->|Fora do escopo| M[Mensagem de recusa]
     L & M --> N[Salva métricas em metricas.csv]
     N --> O[Dashboard de Métricas]
+```
+### Diagrama - Fluxo do Comparador de Modelos
+```mermaid
+flowchart TD
+    A[Cliente] -->|Pergunta| B[Comparador de Modelos]
+    B --> C{Distribui para cada modelo}
+    C --> D[GPT OSS 120B]
+    C --> E[GPT OSS 20B]
+    C --> F[LLaMA 70B VERSATILE]
+    C --> G[Kimi K2 - Moonshot AI]
+    C --> H[Qwen3-32B - Alibaba Cloud]
+    D & E & F & G & H -->|stream=False| I[Respostas simultâneas]
+    I --> J[Exibe lado a lado com métricas]
+    J --> K[Salva em metricas_comparador.csv]
+    K --> L[Histórico de Comparações]
 ```
 
 ### Componentes

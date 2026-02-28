@@ -85,6 +85,13 @@ flowchart TD
 ```
 📁 projeto/
 ├── app.py                            # Interface principal do chat
+├── README.MD                         
+├── requirements.txt                  
+├── 📁 assets/
+|   └── prompt-injection-nivel-1.png
+|   └── prompt-injection-nivel-2.png
+|   └── prompt-injection-nivel-3.png
+|   └── README.MD
 ├── 📁 pages/
 │   ├── dashboard.py                  # Dashboard de métricas (página separada)
 │   └── comparador.py                 # Comparador de modelos LLM
@@ -207,6 +214,6 @@ Modelos disponíveis para comparação:
 |---|---|
 | GPT OSS 120B | `openai/gpt-oss-120b` |
 | GPT OSS 20B | `openai/gpt-oss-20b` |
-| LLaMA 3.3 70B | `llama-3.3-70b-versatile` |
-| Mixtral 8x7B | `mixtral-8x7b-32768` |
-| Gemma2 9B | `gemma2-9b-it` |
+| LLaMA 70B VERSATILE | `llama-3.3-70b-versatile` |
+| Kimi K2 - Moonshot AI | `moonshotai/kimi-k2-instruct-0905` |
+| Qwen3-32B - Alibaba Cloud | `qwen/qwen3-32b` |

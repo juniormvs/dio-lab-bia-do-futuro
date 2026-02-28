@@ -15,8 +15,39 @@ Utilizar o modelo disponível pelo groq [openai/gtp-oss-120b](https://console.gr
 ## Estrutura Sugerida
 
 ```
-src/
-├── app.py              # Aplicação principal (Streamlit)
+📁 lab-agente-financeiro/
+│
+├── 📄 README.md
+│
+├── 📁 data/                          # Dados mockados para o agente
+│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
+│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
+│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
+│   └── transacoes.csv                # Histórico de transações (CSV)
+│   └── metricas.csv                      # ← NOVO — gerado automaticamente
+│
+├── 📁 docs/                          # Documentação do projeto
+│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
+│   ├── 02-base-conhecimento.md       # Estratégia de dados
+│   ├── 03-prompts.md                 # Engenharia de prompts
+│   ├── 04-metricas.md                # Avaliação e métricas
+│   └── 05-pitch.md                   # Roteiro do pitch
+│
+├── 📁 pages/                             # ← NOVO — páginas do Streamlit
+│   ├── dashboard.py                      # Dashboard de métricas com Plotly
+│   ├── comparador.py                      # Dashboard de métricas com Plotly
+│
+├── 📁 utils/                             # ← NOVO — módulos reutilizáveis
+│   ├── charts.py                         # Funções de gráficos do dashboard
+│
+├── 📁 src/                           # Código da aplicação
+│   └── ...                           # (exemplo de estrutura)
+│
+├── 📁 assets/                        # Imagens e diagramas
+│   └── ...
+│
+└── 📁 examples/                      # Referências e exemplos
+    └── README.md
 ```
 
 ## Exemplo de requirements.txt

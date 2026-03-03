@@ -72,18 +72,23 @@ with st.sidebar:
     data_min = df['timestamp'].min().date()
     data_max = df['timestamp'].max().date()
 
-    data_inicio, data_fim = st.date_input(
-        'Período',
-        value     = (data_min, data_max),
-        min_value = data_min,
-        max_value = data_max,
-    )
+    datas = st.date_input(
+    'Período',
+    value     = (data_min, data_max),
+    min_value = data_min,
+    max_value = data_max,
+)
 
-    # Aí aplica o filtro normalmente
-    df = df[
-        (df['timestamp'].dt.date >= data_inicio) & 
-        (df['timestamp'].dt.date <= data_fim)
-    ]
+    # Só aplica o filtro se as duas datas estiverem preenchidas
+    if len(datas) == 2:
+        data_inicio, data_fim = datas
+        df = df[
+            (df['timestamp'].dt.date >= data_inicio) &
+            (df['timestamp'].dt.date <= data_fim)
+        ]
+    else:
+        st.warning('Selecione as duas datas para filtrar o período.')
+        st.stop()
 
 
     st.divider()
